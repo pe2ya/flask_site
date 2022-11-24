@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="fromBlock">
+            <form id="form">
+                <h1>SIGN UP</h1>
+               <div><input class="box" type="text" name="u_name" id="u_name" placeholder="First Name"></div>
+               <div><input class="box" type="text" name="surname" id="surname" placeholder="Last Name"></div>
+               <div><input class="box" type="email" name="email" id="email" placeholder="Email"></div>
+               <div><input class="box" type="text" name="mate_name" id="mate_name" placeholder="Mate name"></div>
+               <div><input class="box" type="text" name="mate_surname" id="mate_surname" placeholder="Mate surname"></div>
+               <div><input type="checkbox" name="is_swimmer" id="is_swimmer" required>
+                <label for="is_swimmer">Are you swimmer ?</label>
+            </div>
+            <input type="submit" id="submit" value="CREATE ACCOUNT">
+            </form>
+        </div>
+        <div class="imgBlock">
+            <img src="{{ url_for('static',filename='photos/reg.png') }}" alt="">
+        </div>
+        <div class="clearfix"></div>
+    </div>
+
+    <script src="{{ url_for('static',filename='pages/script.js') }}"></script>
+</body>
+</html>

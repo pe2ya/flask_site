@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*, *::after, *::before{
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.fromBlock{
+    width: 60%;
+    height: 100vh;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgBlock{
+    width: 40%;
+    height: 100vh;
+    background-color: rgb(29, 47, 63);
+    float: right;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+h1 {
+font-style: normal;
+font-weight: 600;
+font-size: 36px;
+line-height: 44px;
+text-align: center;
+text-transform: uppercase;
+color: #405282;
+}
+
+.box {
+border: none;
+border-bottom: 2px solid #808080;
+width: 630px;
+padding: 10px 0;
+}
+
+.box:focus {
+    border-bottom: 2px solid #405282;
+    outline: none;
+}
+
+div {
+    height: 50px;
+}
+
+a {
+    color: #41C1DC;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #49a3b8;
+    text-decoration: underline;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+label {
+    color: #AEAEAE;
+}
+
+input[type="checkbox"]{
+	width: 0px;
+	height: 0px;
+	opacity: 0;
+	display: block;
+}
+input[type="checkbox"] ~ label:before{
+	content: "";
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	border:2px solid #7F7F7F;
+	border-radius: 5px;
+	margin: 0 10px 0 0;
+	padding: 2px;
+}
+input[type="checkbox"]:checked ~ label:before{
+	background-clip: content-box;
+	background-image: url("data:image/svg+xml,%3Csvg width='16' height='18' viewBox='0 0 18 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.016 19.056C4.016 18.848 3.976 18.744 3.896 18.744L3.344 19.008C3.344 18.896 3.28 18.816 3.152 18.768L2.96 18.744C2.832 18.744 2.672 18.8 2.48 18.912C2.448 18.832 2.408 18.752 2.36 18.672C2.312 18.592 2.272 18.52 2.24 18.456C2.032 18.056 1.824 17.616 1.616 17.136C1.424 16.64 1.24 16.168 1.064 15.72C0.904 15.272 0.776 14.92 0.68 14.664C0.616 14.456 0.544 14.144 0.464 13.728C0.384 13.312 0.304 12.784 0.224 12.144C0.4 12.256 0.536 12.312 0.632 12.312C0.744 12.312 0.848 12.144 0.944 11.808C0.992 11.872 1.08 11.904 1.208 11.904C1.304 11.904 1.376 11.872 1.424 11.808L1.808 11.232L2.24 11.376H2.264C2.296 11.376 2.328 11.36 2.36 11.328C2.392 11.296 2.44 11.264 2.504 11.232C2.632 11.152 2.728 11.112 2.792 11.112L2.864 11.136C3.264 11.328 3.52 11.68 3.632 12.192C3.92 13.408 4.208 14.016 4.496 14.016C4.784 14.016 5.12 13.712 5.504 13.104C5.696 12.8 5.888 12.448 6.08 12.048C6.288 11.648 6.496 11.2 6.704 10.704C6.736 10.896 6.768 10.992 6.8 10.992C6.88 10.992 7.016 10.792 7.208 10.392C7.416 9.992 7.744 9.44 8.192 8.736C8.448 8.304 8.768 7.816 9.152 7.272C9.552 6.728 9.976 6.168 10.424 5.592C10.872 5.016 11.304 4.472 11.72 3.96C12.152 3.448 12.536 3.008 12.872 2.64C13.208 2.272 13.456 2.032 13.616 1.92C14.224 1.504 14.704 1.104 15.056 0.719999C15.04 0.831999 15.016 0.935999 14.984 1.032C14.968 1.112 14.96 1.168 14.96 1.2C14.96 1.264 14.992 1.296 15.056 1.296L15.728 0.959999V1.056C15.728 1.184 15.76 1.248 15.824 1.248C15.872 1.248 15.968 1.176 16.112 1.032C16.256 0.888 16.336 0.783999 16.352 0.719999L16.304 1.056L17.12 0.576L16.928 1.008C17.184 0.831999 17.368 0.743999 17.48 0.743999C17.544 0.743999 17.592 0.783999 17.624 0.863999C17.656 0.927999 17.672 0.991999 17.672 1.056C17.672 1.152 17.632 1.264 17.552 1.392C17.472 1.52 17.368 1.672 17.24 1.848C17.144 1.976 16.984 2.168 16.76 2.424C16.552 2.664 16.232 3.024 15.8 3.504C15.368 3.968 14.792 4.616 14.072 5.448C13.88 5.656 13.584 6.024 13.184 6.552C12.784 7.064 12.328 7.664 11.816 8.352C11.32 9.024 10.824 9.704 10.328 10.392C9.832 11.08 9.392 11.704 9.008 12.264C8.624 12.808 8.352 13.216 8.192 13.488L6.704 16.008C6.384 16.552 6.12 17 5.912 17.352C5.704 17.688 5.544 17.92 5.432 18.048C5.192 18.336 4.928 18.592 4.64 18.816L4.424 18.696L4.232 18.816L4.016 19.056Z' fill='%2341C1DC'/%3E%3C/svg%3E%0A");
+}
+
+input[type="submit"] {
+    width: 630px;
+    height: 60px;
+    border-radius: 30px;
+    border: none;
+    font-size: 28px;
+    transition: background-color .5s ease;
+    color: white;
+    background: #405282;
+}
+
+input[type="submit"]:hover {
+    background-color: #41C1DC;
+}
+
+input[type="submit"]:focus{
+    box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, 0.2);
+    background: #405282;
+}
+
+input::placeholder{
+    color: #AEAEAE;
+}
+input:focus::placeholder{
+    color:#808080;
+}
