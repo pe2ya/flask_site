@@ -91,7 +91,7 @@ def create():
                 u_id = user.find_user_id(mate_name, mate_surname)
 
                 if u_id == 0:
-                    return jsonify(False), 200
+                    return jsonify("Your mate doesn't exist"), 200
                 else:
                     u_email = user.find_user(mate_name, mate_surname).email
                     c_id = user.find_user_id(name, surname).id
@@ -103,10 +103,10 @@ def create():
                     user.add_user(name, surname, email, u_id)
                     return jsonify(True), 200
         else:
-            return jsonify(False), 200
+            return jsonify("User already exist"), 200
 
     else:
-        return jsonify(False), 200
+        return jsonify("Incorrect user data"), 200
 
 
 if __name__ == '__main__':
