@@ -11,6 +11,11 @@ var is_swimmer = document.querySelector("#is_swimmer")
 
 
 form.onsubmit = () => {
+
+    if (!is_swimmer.checked) {
+        alert("You must be a swimmer")
+        return false
+    }
 ////
 //    tester = /^[_A-zA-Z]*((-|\s)*[_A-zA-Z])*$/
 //    email_tester = /^\S+@\S+\.\S+$/
@@ -83,6 +88,7 @@ form.onsubmit = () => {
 //        alert("user already exist")
 //        return false
 //    }
+
 
     sendMessage()
     return false

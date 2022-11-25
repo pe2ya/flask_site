@@ -85,7 +85,7 @@ def create():
             if not mate_name and not mate_surname:
 
                 user.add_user(name, surname, email)
-                return jsonify(True), 200
+                return jsonify("Thx for registration"), 200
 
             else:
                 u_id = user.find_user_id(mate_name, mate_surname)
@@ -94,14 +94,14 @@ def create():
                     return jsonify("Your mate doesn't exist"), 200
                 else:
                     u_email = user.find_user(mate_name, mate_surname).email
-                    c_id = user.find_user_id(name, surname).id
+                    c_id = user.find_user_id(name, surname)
                     outlook.send(
                         receivers=[u_email],
                         subject="Confirm",
                         text=f"You want you be in team with {name}?\nFollow link http://127.0.0.1:8080/api/user/confirm/{c_id} or ignore if u doesn't "
                     )
                     user.add_user(name, surname, email, u_id)
-                    return jsonify(True), 200
+                    return jsonify("Thx for registration"), 200
         else:
             return jsonify("User already exist"), 200
 
